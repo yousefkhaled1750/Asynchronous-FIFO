@@ -1,0 +1,50 @@
+{E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/FIFO_CMP.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/FIFO_CMP.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FIFO_CMP
+
+Top level modules:
+	FIFO_CMP
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/BIT_SYNC.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/BIT_SYNC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BIT_SYNC
+
+Top level modules:
+	BIT_SYNC
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/FIFO.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/FIFO.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module FIFO
+
+Top level modules:
+	FIFO
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/RAM_module.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/RAM_module.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module RAM_module
+
+Top level modules:
+	RAM_module
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/REG.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/REG.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module REG
+
+Top level modules:
+	REG
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/Grey_coding.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/Grey_coding.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Grey_coding
+
+Top level modules:
+	Grey_coding
+
+} {} {}} {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/BUS_SYNC.v} {1 {vlog -work work -stats=none {E:/Courses/Digital/Temsah Diploma/CDC/Asynchronous FIFO/BUS_SYNC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BUS_SYNC
+
+Top level modules:
+	BUS_SYNC
+
+} {} {}}
