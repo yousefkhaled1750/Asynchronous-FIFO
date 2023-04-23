@@ -1,38 +1,29 @@
-module FIFO_CMP  (
-    input   wire    [3:0]       write_addr,
-    input   wire    [3:0]       write_addr_sync,
-    input   wire    [3:0]       read_addr,
-    input   wire    [3:0]       read_addr_sync,
-    input   wire                RST,
+module FIFO_CMP  #(parameter ADDR_WIDTH = 4)(
+    input   wire    [ADDR_WIDTH : 0]            write_addr,
+    input   wire    [ADDR_WIDTH : 0]            write_addr_sync,
+    input   wire    [ADDR_WIDTH : 0]            read_addr,
+    input   wire    [ADDR_WIDTH : 0]            read_addr_sync,
 
-    output  reg                 FULL_flag,
-    output  reg                 EMPTY_flag        
+    output  reg                                 FULL_flag,
+    output  reg                                 EMPTY_flag        
 );
 
 
     //FULL block
-    always @(negedge RST, write_addr, read_addr_sync) begin
-        if (!RST) begin
-            FULL_flag  <= 0;
-        end else begin
-            if(write_addr == read_addr_sync)
-                FULL_flag <= 1;
-            else
-                FULL_flag <= 0;
-        end
+    always @(*) begin
+        if(write_addr[ADDR_WIDTH - 1 : 0] == read_addr_sync[ADDR_WIDTH - 1 : 0] &&write_addr[ADDR_WIDTH] != read_addr_sync[ADDR_WIDTH] )
+            FULL_flag = 1;
+        else
+            FULL_flag = 0;
     end
     
 
     //EMPTY block
-    always @( RST, read_addr, write_addr_sync) begin
-        if (!RST) begin
-            EMPTY_flag  <= 1;
-        end else begin
-            if(read_addr == write_addr_sync)
-                EMPTY_flag <= 1;
-            else
-                EMPTY_flag <= 0;
-        end
+    always @(*) begin
+        if(read_addr == write_addr_sync)
+            EMPTY_flag = 1;
+        else
+            EMPTY_flag = 0;
     end
 
 

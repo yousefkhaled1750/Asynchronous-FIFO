@@ -7,10 +7,10 @@ module BUS_SYNC #(parameter NUM_STAGES = 2, parameter BUS_WIDTH = 4)
 );
 
     genvar  i;
-
+generate
     for (i = 0 ; i < BUS_WIDTH ; i = i + 1 ) begin
         BIT_SYNC    #(.NUM_STAGES(NUM_STAGES))  U0  (.ASYNC(ASYNC[i]), .CLK(CLK), .RST(RST), .SYNC(SYNC[i]));
     end
-
+endgenerate 
 
 endmodule

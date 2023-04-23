@@ -1,14 +1,21 @@
-module Grey_coding(
-    input wire      [3:0]   Binary,
+module Grey_coding #(parameter ADDR_WIDTH = 4)(
+    input wire      [ADDR_WIDTH - 1 : 0]   Binary,
 
-    output wire     [3:0]   Grey
+    output wire     [ADDR_WIDTH - 1 : 0]   Grey
 );
 
+    genvar i;
+    
 
-    assign Grey[0] = Binary[0] ^ Binary[1];
-    assign Grey[1] = Binary[1] ^ Binary[2];
-    assign Grey[2] = Binary[2] ^ Binary[3];
-    assign Grey[3] = Binary[3];
+    assign Grey[ADDR_WIDTH - 1]    = Binary[ADDR_WIDTH - 1];
+
+
+    generate 
+        for (i = 0; i < ADDR_WIDTH - 1; i = i + 1)
+            begin
+                assign Grey[i] = Binary[i] ^ Binary[i+1];
+            end
+    endgenerate
 
 
 endmodule
